@@ -21,6 +21,8 @@ const Game = () => {
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState('');
   const [disabled, setDisabled] = useState(Array(9).fill(false));
+  const [xWins, setXWins] = useState(0);
+  const [oWins, setOWins] = useState(0);
 
   const resetGame = () => {
     setBoxes(Array(9).fill(''));
@@ -30,9 +32,17 @@ const Game = () => {
     setDisabled(Array(9).fill(false));
   };
 
+  const restartGame = () => {
+    resetGame();
+    setXWins(0);
+    setOWins(0);
+  };
+
   const handleBoxClick = (index) => {
+    if (boxes[index] || disabled[index]) return;
+
     const newBoxes = boxes.slice();
-    newBoxes[index] = turnO ? 'O' : 'X';
+    newBoxes[index] = turnO ? 'X' : 'O';
     setBoxes(newBoxes);
     setTurnO(!turnO);
     setCount(count + 1);
@@ -40,16 +50,25 @@ const Game = () => {
   };
 
   const checkWinner = (newBoxes) => {
-    for (let pattern of winPatterns) {
+    let winnerFound = false;
+
+    winPatterns.forEach(pattern => {
       const [a, b, c] = pattern;
       if (newBoxes[a] && newBoxes[a] === newBoxes[b] && newBoxes[a] === newBoxes[c]) {
         setMessage(`Felicitări, câștigătorul este ${newBoxes[a]}`);
         setDisabled(Array(9).fill(true));
-        return;
+        if (newBoxes[a] === 'X') {
+          setXWins(xWins + 1);
+        } else {
+          setOWins(oWins + 1);
+        }
+        winnerFound = true;
       }
-    }
-    if (count === 8) {
+    });
+
+    if (count === 8 && !winnerFound) {
       setMessage('Jocul a fost remiză.');
+      setDisabled(Array(9).fill(true));
     }
   };
 
@@ -58,7 +77,11 @@ const Game = () => {
       <h1 className="title">Tic Tac Toe</h1>
       <Board boxes={boxes} onClick={handleBoxClick} disabled={disabled} />
       <Message message={message} />
-      <Controls onReset={resetGame} onNewGame={resetGame} />
+      <div className="scoreboard">
+        <p>Victoriile lui X: {xWins}</p>
+        <p>Victoriile lui O: {oWins}</p>
+      </div>
+      <Controls onReset={resetGame} onNewGame={restartGame} />
     </div>
   );
 };

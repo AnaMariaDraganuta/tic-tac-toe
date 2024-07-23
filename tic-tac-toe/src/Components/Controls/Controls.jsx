@@ -4,7 +4,7 @@ import './Controls.css';
 const Controls = ({ onReset, onNewGame }) => {
   return (
     <div className="controls">
-      <button className="reset-btn" onClick={onReset}>Reset</button>
+      <button className="reset-btn" onClick={onReset}>Reset Game</button>
       <button className="new-btn" onClick={onNewGame}>New Game</button>
     </div>
   );
