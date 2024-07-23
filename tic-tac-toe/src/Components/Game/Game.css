@@ -1,8 +1,43 @@
 .container {
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 2rem;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.scoreboard p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.container .message {
+  margin: 20px 0;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ddd;
+}

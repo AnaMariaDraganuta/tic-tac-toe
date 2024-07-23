@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Message = ({ message }) => {
   return (
     <div className={`msg-container ${message ? '' : 'hide'}`}>
-      <p id="msg">{message}</p>
+      <p className="msg">{message}</p>
     </div>
   );
 };
