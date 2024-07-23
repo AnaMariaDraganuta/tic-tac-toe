@@ -1,0 +1,13 @@
+.msg-container {
+    margin-top: 20px;
+  }
+  
+  .msg-container.hide {
+    display: none;
+  }
+  
+  #msg {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
