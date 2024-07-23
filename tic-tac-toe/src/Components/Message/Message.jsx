@@ -12,5 +12,5 @@ const Message = ({ message }) => {
 export default Message;
 
 Message.propTypes = {
-    message: PropTypes.any
+    message: PropTypes.string
   };

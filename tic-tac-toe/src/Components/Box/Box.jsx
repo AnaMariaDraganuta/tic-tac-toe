@@ -12,7 +12,7 @@ const Box = ({ value, onClick, disabled }) => {
 export default Box;
 
 Box.propTypes = {
-    value: PropTypes.array,
-    onClick: PropTypes.array,
-    disabled: PropTypes.array
+    value: PropTypes.string,
+    onClick: PropTypes.func,
+    disabled: PropTypes.bool
   };

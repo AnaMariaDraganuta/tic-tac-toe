@@ -1,14 +1,12 @@
 import "./App.css";
-import Board from "./Components/Board/Board";
-import Box from "./Components/Box/Box";
+import Game from "./Components/Game/Game";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Box></Box>
-      <Board></Board>
-    </>
+    <div className="app">
+      <Game />
+    </div>
   );
-}
+};
 
 export default App;

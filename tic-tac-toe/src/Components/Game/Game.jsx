@@ -55,7 +55,7 @@ const Game = () => {
 
   return (
     <div className="container">
-      <h1 className="title">Joc Tic Tac Toe în <span>React</span></h1>
+      <h1 className="title">Tic Tac Toe</h1>
       <Board boxes={boxes} onClick={handleBoxClick} disabled={disabled} />
       <Message message={message} />
       <Controls onReset={resetGame} onNewGame={resetGame} />

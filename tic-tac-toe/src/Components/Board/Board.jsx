@@ -15,7 +15,7 @@ const Board = ({ boxes, onClick, disabled }) => {
 export default Board;
 
 Board.propTypes = {
-    boxes: PropTypes.any,
-    onClick: PropTypes.any,
-    disabled: PropTypes.anyy
+    boxes: PropTypes.arrayOf(PropTypes.string),
+    onClick: PropTypes.func,
+    disabled: PropTypes.arrayOf(PropTypes.bool)
   };

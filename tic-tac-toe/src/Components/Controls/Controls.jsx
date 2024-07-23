@@ -4,8 +4,8 @@ import './Controls.css';
 const Controls = ({ onReset, onNewGame }) => {
   return (
     <div className="controls">
-      <button id="reset-btn" onClick={onReset}>Reset</button>
-      <button id="new-btn" onClick={onNewGame}>New Game</button>
+      <button className="reset-btn" onClick={onReset}>Reset</button>
+      <button className="new-btn" onClick={onNewGame}>New Game</button>
     </div>
   );
 };
@@ -13,8 +13,6 @@ const Controls = ({ onReset, onNewGame }) => {
 export default Controls;
 
 Controls.propTypes = {
-    onReset: PropTypes.any,
-    onNewGame: PropTypes.any
-
-
+    onReset: PropTypes.func,
+    onNewGame: PropTypes.func
   };
