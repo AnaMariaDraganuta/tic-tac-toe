@@ -10,6 +10,7 @@ const Message = ({ message }) => {
 };
 
 export default Message;
+
 Message.propTypes = {
-    message: PropTypes.array
+    message: PropTypes.any
   };
