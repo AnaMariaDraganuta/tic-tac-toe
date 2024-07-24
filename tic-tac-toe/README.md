@@ -11,8 +11,8 @@ Include, de asemenea, o funcție de restartare și evidențierea câștigurilor 
 - **Resetare și restartare**: Poți reseta jocul curent sau începe un joc nou, resetând și numărătoarea câștigurilor.
 - **Mesaje de status**: Mesaje clare care indică câștigătorul sau dacă jocul este remiză.
 
-## Previzualizare
+## Demo
 
-![Preview](https://raw.githubusercontent.com/AnaMariaDraganuta/tic-tac-toe/main/Screenshot.png)
+![Demo](https://raw.githubusercontent.com/AnaMariaDraganuta/Screenshot/main/tic-tac-toe.png)
 
 
