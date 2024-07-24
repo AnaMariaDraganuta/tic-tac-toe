@@ -1,6 +1,5 @@
 # Tic Tac Toe în React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 - Acesta este un proiect de joc Tic Tac Toe implementat folosind React. 
 - Jocul permite utilizatorilor să joace împotriva altui jucător pe același dispozitiv. 
 Include, de asemenea, o funcție de restartare și evidențierea câștigurilor pentru fiecare jucător.
@@ -12,6 +11,8 @@ Include, de asemenea, o funcție de restartare și evidențierea câștigurilor 
 - **Resetare și restartare**: Poți reseta jocul curent sau începe un joc nou, resetând și numărătoarea câștigurilor.
 - **Mesaje de status**: Mesaje clare care indică câștigătorul sau dacă jocul este remiză.
 
-## Previzualizare
+## Demo
 
-![Preview](https://raw.githubusercontent.com/AnaMariaDraganuta/tic-tac-toe/main/Screenshot.png)
+![Demo](https://raw.githubusercontent.com/AnaMariaDraganuta/Screenshot/main/tic-tac-toe.png)
+
+
